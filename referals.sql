@@ -120,6 +120,16 @@ CREATE TABLE public.referral_commissions (
 );
 
 
+INSERT INTO public.referral_commissions
+(coupon_code, commission_type, commission_value, service_id, valid_from, valid_to, min_units)
+VALUES('BIGSPENDER', 'percentage', 1.00, 1, '2024-01-01', '2024-05-01', 1);
+INSERT INTO public.referral_commissions
+(coupon_code, commission_type, commission_value, service_id, valid_from, valid_to, min_units)
+VALUES('BIGSPENDER', 'percentage', 7.00, 2, '2025-03-19', NULL, 2000);
+INSERT INTO public.referral_commissions
+(coupon_code, commission_type, commission_value, service_id, valid_from, valid_to, min_units)
+VALUES('BIGSPENDER', 'percentage', 10.00, 2, '2025-03-19', NULL, 5000);
+
 -- public.referrals definition
 
 -- Drop table
