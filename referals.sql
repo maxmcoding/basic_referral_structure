@@ -207,7 +207,7 @@ BEGIN
             -- Apply discount
             CASE coupon_record.discount_type
                 WHEN 'percentage' THEN
-                    base_calc := base_calc * (1 - coupon_record.discount_value/100);
+                    base_calc :=  base_calc - ((base_calc * coupon_record.discount_value ) / 100 );
                 WHEN 'fixed' THEN
                     base_calc := GREATEST(base_calc - coupon_record.discount_value, 0);
             END CASE;
